@@ -12,7 +12,7 @@ function Basket(props) {
       <button onClick={()=>onAdd(item)} className='add'>
         +
       </button>
-      <button onClick={()=>onAdd(item)} className='add'>
+      <button onClick={()=>onRemove(item)} className='add'>
         -
       </button>
     </div>
