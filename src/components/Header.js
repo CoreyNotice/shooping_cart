@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Header(props) {
+    const {countCartItems}=props
   return (
     <header className='row block center'>
         <div>
@@ -10,7 +11,14 @@ function Header(props) {
         </a>
         </div>
         <div>
-            <a href='#/cart'>Cart</a><a href='#/cart'>Sign In</a>
+            <a href='#/cart'>
+                Cart{''}
+                {countCartItems?(
+                    <button className='badge'>{countCartItems}</button>
+                ):(
+                    ''
+                )}
+                </a><a href='#/cart'>Sign In</a>
         </div>
     </header>
   )
